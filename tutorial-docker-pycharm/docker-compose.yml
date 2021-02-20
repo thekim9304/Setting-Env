@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  test:
+    restart: always
+    build: .
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/home/brunch
+    command: jupyter notebook
